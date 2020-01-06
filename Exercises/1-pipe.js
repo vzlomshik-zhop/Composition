@@ -6,7 +6,7 @@ const pipe = (...fns) => {
   while (i < n && typeof(fns[i]) === "function")
     i++;
   if (i != n)
-    throw "Error";
+    throw new Error("err");
   return (x) => {
     let a = x;
     for (let i = 0; i < n; i++)
